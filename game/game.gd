@@ -10,6 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameManager.on_game_over.connect(_on_game_over)
 	spawn_pipes()
 
 
@@ -27,3 +28,7 @@ func spawn_pipes() -> void:
 
 func _on_spawn_timer_timeout():
 	spawn_pipes()
+
+
+func _on_game_over():
+	pass
